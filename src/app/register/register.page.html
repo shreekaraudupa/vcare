@@ -1,0 +1,80 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>User Registration</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+
+		<ion-item>
+			<ion-item>
+				<ion-input placeholder="Name" type="text" [(ngModel)]="name"></ion-input>
+			</ion-item>
+		</ion-item>
+
+		<ion-item>
+			<ion-item>
+				<ion-input placeholder="Email" type="text" [(ngModel)]="email"></ion-input>
+			</ion-item>
+		</ion-item>
+
+
+		<ion-item>
+			<ion-item>
+				<ion-input placeholder="Phone" type="text" [(ngModel)]="phone"></ion-input>
+			</ion-item>
+		</ion-item>
+
+		<ion-item>
+			<ion-item>
+				<ion-input placeholder="Address" type="text" [(ngModel)]="address"></ion-input>
+			</ion-item>
+		</ion-item>
+
+		<ion-item>
+			<ion-datetime displayFormat="DD MM YY" placeholder="DOB(DD-MM-YY)" [(ngModel)]="dob"></ion-datetime>
+		</ion-item>
+
+		<ion-item>
+			<ion-select placeholder="Challenge Question" [(ngModel)]="question">
+				<ion-select-option value="First Pet Name">What is the name of your first pet?</ion-select-option>
+				<ion-select-option value="Grandfather's Name">What is your grandfather's name?</ion-select-option>
+				<ion-select-option value="First Phone's Model">What is the model of your first phone?</ion-select-option>
+			</ion-select>
+		</ion-item>
+
+
+		<ion-item>
+			<ion-item>
+				<ion-input placeholder="Answer" type="text" [(ngModel)]="answer"></ion-input>
+			</ion-item>
+		</ion-item>
+
+
+		<ion-item>
+			<ion-select placeholder="Associated Hospital" [(ngModel)]="hospital">
+				<ion-select-option value="Tata Memorial">Tata Memorial</ion-select-option>
+				<ion-select-option value="Breach Candy">Breach Candy</ion-select-option>
+				<ion-select-option value="Lilawati">Lilawati</ion-select-option>
+			</ion-select>
+		</ion-item>
+
+		<ion-item>
+			<ion-item>
+				<ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
+			</ion-item>
+		</ion-item>
+
+		<ion-item>
+			<ion-item>
+				<ion-input placeholder="Confirm Password" type="password" [(ngModel)]="cpassword"></ion-input>
+			</ion-item>
+		</ion-item>
+
+	</ion-list>
+
+
+
+	<ion-button fill="solid" expand="block" color="dark" (click)="register()">Register User</ion-button>
+</ion-content>

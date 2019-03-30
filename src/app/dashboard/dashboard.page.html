@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>      
+      <ion-title>
+       Dashboard
+      </ion-title>
+        <ion-buttons slot="end">
+          <ion-button expand="block" color="danger" (click)="logout()">Logout <ion-icon name="log-out"></ion-icon></ion-button> 
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+<ion-content padding>
+
+<ion-list>
+  <ion-button fill="solid" expand="block" color="primary" (click)="registerUser()"><ion-icon name="person-add"></ion-icon> Register User</ion-button>
+
+  <ion-button fill="solid" expand="block" color="secondary" (click)="registerPatient()"><ion-icon name="add-circle"></ion-icon> Register Patient</ion-button>
+
+  <ion-button fill="solid" expand="block" color="dark" (click)="searchPatient()"><ion-icon name="search"></ion-icon> Search Patient</ion-button>
+
+
+</ion-list>
+
+
+
+
+</ion-content>

@@ -1,0 +1,73 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Patient Registration</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-list>
+  
+      <ion-item>
+        <ion-item>
+          <ion-input placeholder="Name" type="text" [(ngModel)]="name"></ion-input>
+        </ion-item>
+      </ion-item>
+  
+      <ion-item>
+        <ion-item>
+          <ion-input placeholder="File Number" type="text" [(ngModel)]="fileNo"></ion-input>
+        </ion-item>
+      </ion-item>
+  
+  
+      <ion-item>
+        <ion-item>
+          <ion-input placeholder="Age" type="age" [(ngModel)]="age"></ion-input>
+        </ion-item>
+      </ion-item>
+
+      <ion-item>
+          <ion-select placeholder="Sex" [(ngModel)]="sex">
+            <ion-select-option value="M">Male</ion-select-option>
+            <ion-select-option value="F">Female</ion-select-option>
+          </ion-select>
+        </ion-item>
+  
+      <ion-item>
+        <ion-item>
+          <ion-input placeholder="Cancer Type" type="text" [(ngModel)]="cancer"></ion-input>
+        </ion-item>
+      </ion-item>
+
+      <ion-item>
+          <ion-item>
+            <ion-input placeholder="State" type="text" [(ngModel)]="state"></ion-input>
+          </ion-item>
+        </ion-item>
+
+      <ion-item>
+          <ion-select placeholder="Associated Hospital" [(ngModel)]="hospital">
+            <ion-select-option value="Tata Memorial">Tata Memorial</ion-select-option>
+            <ion-select-option value="Breach Candy">Breach Candy</ion-select-option>
+            <ion-select-option value="Lilawati">Lilawati</ion-select-option>
+          </ion-select>
+        </ion-item>
+  
+      <ion-item>
+        <ion-datetime displayFormat="DD MM YY" placeholder="Date of Admission(DD-MM-YY)" [(ngModel)]="date"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+          <ion-select placeholder="Ward Category" [(ngModel)]="ward">
+            <ion-select-option value="Private">Private</ion-select-option>
+            <ion-select-option value="General">General</ion-select-option>
+          </ion-select>
+        </ion-item>
+  
+  
+    </ion-list>
+  
+  
+  
+    <ion-button fill="solid" expand="block" color="dark" (click)="addPatient()">Add Patient</ion-button>
+  </ion-content>

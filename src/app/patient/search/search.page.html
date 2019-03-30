@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-input placeholder="Enter Name" [(ngModel)]="patientName"></ion-input>
+    <ion-button fill="solid" expand="block" color="dark" (click)="searchPatient()">Search</ion-button>
+    <ion-grid>
+      <ion-row >
+        <ion-col>  
+          <div>
+            File Number
+          </div>
+        </ion-col>
+        <ion-col offset=2>  
+          <div>
+            Patient Name
+          </div>
+        </ion-col>
+      </ion-row>
+      <div *ngFor="let item of patient | async">
+      <ion-row *ngIf="item.name==patientName">
+        <ion-col >
+            <div>{{ item.fileNo }} </div>
+        </ion-col>
+        <ion-col>
+          <div>{{ item.name }} </div>
+      </ion-col>
+      <ion-col>  
+        <div>
+          <ion-button>Details</ion-button>
+        </div>
+      </ion-col>
+      </ion-row>
+    </div>
+    </ion-grid>
+
+    </ion-list>
+</ion-content>
